@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0b09" />
+    <title>Flores para ti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500&family=Parisienne&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="page-glow"></div>
+    <div class="petals" aria-hidden="true"></div>
+    <section class="welcome-screen" id="welcomeScreen" aria-labelledby="welcomeTitle">
+      <div class="welcome-card">
+        <p class="eyebrow">UN DETALLE HECHO CON CARIÑO</p>
+        <h1 id="welcomeTitle">Antes de comenzar...</h1>
+        <p class="welcome-subtitle">Cuéntame un poquito de ti <span>♡</span></p>
+        <form id="welcomeForm" novalidate>
+          <label for="nameInput">¿Cómo te llamas?</label>
+          <input id="nameInput" name="nombre" type="text" autocomplete="given-name" placeholder="Escribe tu nombre" required maxlength="60" />
+          <label for="wordInput">Una palabra que te describa</label>
+          <input id="wordInput" name="palabra" type="text" autocomplete="off" placeholder="Escribe una sola palabra" required maxlength="60" aria-describedby="wordHint formMessage" />
+          <p class="field-hint" id="wordHint">Solo una palabra <span>✦</span></p>
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+          <button class="gold-button" type="submit">Continuar <span>→</span></button>
+        </form>
+        <p class="welcome-note">Las mejores historias comienzan con un pequeño gesto</p>
+      </div>
+    </section>
+    <header class="nav wrap">
+      <a class="brand" href="#inicio">Flores <span>♡</span></a>
+      <nav><a href="#inicio">Inicio</a><a href="#ramo">El ramo</a><a href="#dedicatoria">Historia</a></nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">UN DETALLE HECHO CON CARIÑO</p>
+          <h1 id="personalGreeting">Para ti <em>♡</em></h1>
+          <div class="little-heart">♡</div>
+          <p class="intro">Hay flores que iluminan un espacio, y personas que iluminan mucho más.</p>
+          <button class="gold-button" id="enterButton">Ver mi sorpresa <span>→</span></button>
+          <p class="note">Para los momentos que merecen florecer</p>
+        </div>
+        <div class="hero-art" id="ramo">
+          <div class="halo"></div>
+          <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span><span class="spark s4"></span><span class="spark s5"></span>
+          <img src="/images/golden-bouquet.png" alt="Ramo de flores amarillas" class="bouquet" />
+          <div class="art-caption">Que siempre florezcan tus días <span>♡</span></div>
+        </div>
+      </section>
+
+      <section id="dedicatoria" class="dedication wrap">
+        <div class="letter">
+          <span class="letter-corner">♡</span>
+          <p class="eyebrow">PARA TI</p>
+          <h2>Con todo mi cariño</h2>
+          <div class="ornament">— ✦ —</div>
+          <p>Que encuentres flores en los días grises, razones para sonreír y personas que te recuerden lo increíble que eres.</p>
+          <p>Este pequeño ramo digital es un recordatorio: mereces cosas bonitas, tranquilidad y momentos que se queden contigo.</p>
+          <div class="special-word" id="specialWord" aria-live="polite"><span>Y recuerda siempre algo</span><i>✦</i><strong></strong><b>♡</b></div>
+          <p class="signoff">Con mucho cariño,<br><span>alguien que te aprecia</span></p>
+          <div class="ornament">— ♡ —</div>
+        </div>
+        <div class="dedication-copy">
+          <p class="eyebrow">UN MENSAJE ENTRE PÉTALOS</p>
+          <h2>Las flores dicen lo que a veces cuesta poner en palabras.</h2>
+          <p>Cada destello celebra tu forma de estar en el mundo. Esta experiencia está pensada para que vuelvas a ella cuando necesites un poco de luz.</p>
+          <button class="text-button" id="replayButton">Haz brillar el ramo <span>✦</span></button>
+        </div>
+      </section>
+    </main>
+
+    <footer>Hecho con luz dorada <span>♡</span></footer>
+    <audio id="backgroundMusic" loop preload="auto" playsinline>
+      <source src="/music/MusicF2.mp3" type="audio/mpeg" />
+    </audio>
+    <div class="music-control" role="group" aria-label="Controles de música">
+      <button id="playPause" aria-label="Reproducir música" title="Reproducir música">▶</button>
+      <button id="mute" aria-label="Silenciar música" title="Silenciar música">◖))</button>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
